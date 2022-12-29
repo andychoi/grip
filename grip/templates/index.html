@@ -17,8 +17,8 @@
   <style>
     /* Page tweaks */
     .preview-page {
-      /* margin-top: 64px;
-      margin-bottom: 21px; */
+      margin-top: 1.5em;
+      margin-bottom: 1em;
     }
     /* User-content tweaks */
     .timeline-comment-wrapper > .timeline-comment:after,
@@ -27,7 +27,18 @@
     }
     /* User-content overrides */
     .discussion-timeline.wide {
-      /* width: 920px; */
+      width: 960px;
+    }
+    .Layout {
+      --Layout-sidebar-width: 0px;
+      --Layout-gutter: 16px;
+      display: grid
+    }
+    .Box-header, .Box--responsive { border: 0;}
+    .container-lg {
+      max-width: 1012px;
+      margin-right: 10px;
+      margin-left: 10px;
     }
     /* Print styles */
     @media print {
@@ -115,7 +126,7 @@
 {%- block page -%}
   <div id="preview-page" class="preview-page" data-autorefresh-url="{{ autorefresh_url if autorefresh_url }}">
     <main id="js-repo-pjax-container">
-      <div class="clearfix new-discussion-timeline container-xl px-3 px-md-4 px-lg-5">
+      <div class="clearfix new-discussion-timeline ">
         <div class="repository-content">
           <div class="clearfix">
             <div class="Layout Layout--flowRow-until-md Layout--sidebarPosition-end Layout--sidebarPosition-flowRow-end">
